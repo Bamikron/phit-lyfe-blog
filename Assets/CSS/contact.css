@@ -254,7 +254,6 @@ body.dark-theme {
     top: 0;
     z-index: 1;
     padding: 0px 16px;
-    box-shadow: var(--elevation-1);
 }
 
 .upper-top-left {
@@ -382,8 +381,11 @@ body.dark-theme input:focus+.slider {
 .heroandnav {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+    background-image: url(../Images/Images\ used/unsplash_y6WHL1CS9iU.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: 66px;
+    background-position: 0 50%;
     padding: 0px 64px;
 }
 
@@ -487,13 +489,11 @@ nav img {
     width: 50%;
     height: 100%;
     display: flex;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
 
 }
-
 
 
 .heroimageback {
@@ -519,125 +519,78 @@ nav img {
     height: 125%;
 }
 
-.topnavbtn {
-    background-color: var(--on-primary);
-    border: none;
-    border-radius: 8px;
-    color: var(--primary-color);
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    padding: 0px 64px;
+    margin-top: 200px;
+    gap: 80px;
+}
+
+main input {
+    border-radius: 16px;
+    border: 3px solid var(--primary-color);
     height: 40px;
-    padding: 8px 32px;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0px 8px;
     font-size: 16px;
-}
-
-.topnavbtn:hover {
-    background-color: var(--alert-color);
-    color: var(--on-alert);
-}
-
-
-
-
-.wellnessweek {
-    margin: 64px;
-    display: flex;
-    gap: 40px;
-    height: auto;
-}
-
-
-.awarenesspost,
-.wellnesspost {
-    height: 55vh;
-    background-color: teal;
-    width: 36%;
-    border-radius: 20px;
-    position: relative;
-}
-
-.awarenesspost img,
-.wellnesspost img {
-    width: 100%;
-    height: 55vh;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-
-.welaredet {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 90%;
-    color: rgba(255, 255, 255, 0.807);
-
-}
-
-.welaredet button {
-    width: 40%;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.587);
-    color: var(--on-alert);
-}
-
-
-.wekklposthead {
-    width: 20%;
-}
-
-
-.wekklposthead h4 {
-    font-weight: 100;
-    font-size: 50px;
-}
-
-
-
-
-
-footer {
-    width: 50%;
-    margin: 200px auto 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-}
-
-.newsletter {
-    display: flex;
-    gap: 0px;
-    width: 100%;
-    justify-content: center;
-    padding: 8px;
-}
-
-.logo img {
-    width: 200px;
-}
-
-.newsletter input {
-    width: 50%;
-    height: 40px;
-    background-color: transparent;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     outline: none;
-    border: 2px solid var(--primary-color);
-    padding-left: 8px;
+    background-color: transparent;
 }
 
-.newsletter button {
-    background-color: #00B050;
-    border: none;
-    padding: 8px 16px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+main input:focus {
+    border: 2px solid var(--secondary-color);
 }
+
+main input:last-child {
+    width: 40%;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--on-primary);
+}
+
+
+main textarea {
+    width: 100%;
+    height: 25vh;
+    resize: none;
+    outline: none;
+    border: 3px solid var(--primary-color);
+    font-size: 16px;
+    padding: 8px;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+main textarea:focus {
+    border: 2px solid var(--secondary-color);
+}
+
+.contactinfo, .emailinfo {
+    padding: 16px;
+    box-shadow: var(--elevation-2);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactinfo i, .emailinfo i {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+
 
 
 .fixedsidesocail {
@@ -685,7 +638,45 @@ footer {
     opacity: 1;
 }
 
+footer {
+    width: 50%;
+    margin: 200px auto 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
 
+.newsletter {
+    display: flex;
+    gap: 0px;
+    width: 100%;
+    justify-content: center;
+    padding: 8px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.newsletter input {
+    width: 50%;
+    height: 40px;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    padding-left: 8px;
+}
+
+.newsletter button {
+    background-color: #00B050;
+    border: none;
+    padding: 8px 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
 
 .search {
@@ -749,133 +740,6 @@ footer {
     bottom: 0;
     right: 0;
 }
-
-
-
-.fa-regular.fa-circle-play {
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: 160px;
-
-}
-
-.youtube-container {
-    width: 100%;
-    padding: 0px 64px;
-    margin-top: 200px;
-}
-
-
-.youtube {
-    height: 120vh;
-    color: white;
-    width: 100%;
-    border-radius: 64px;
-    position: relative;
-
-}
-
-
-
-
-.youtube video {
-    height: 120vh;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 64px;
-
-}
-
-.youtube .over {
-    height: 120vh;
-    width: 100%;
-    object-fit: cover;
-    background-color: rgba(0, 0, 0, 0.497);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 64px;
-}
-
-.youtubedetail {
-    width: 90%;
-    left: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 64px;
-    position: absolute;
-    top: 40%;
-    left: 5%;
-
-}
-
-.youtubedetail>* {
-    text-align: center;
-}
-
-.playcircle {
-    top: 80%;
-    right: 32px;
-    background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.playcircle i:hover {
-    color: var(--alert-color);
-}
-
-.testimonial-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 24px;
-    margin-top: 200px;
-    padding: 0px 64px;
-}
-
-.testimonial {
-    height: 50vh;
-    box-shadow: var(--elevation-2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    background-color: var(--on-primary);
-    border-radius: 24px;
-    padding: 8px 16px;
-}
-
-body.dark-theme .testimonial {
-    background-color: var(--on-alert);
-    box-shadow: var(--elevation-2-dark);
-}
-
-.testimonial img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.testimonial a {
-    color: var(--primary-color);
-}
-
-
-
-
-
-
-
 
 @media screen and (max-width: 767px) {
 
@@ -966,11 +830,6 @@ body.dark-theme .testimonial {
         width: 100%;
         display: flex;
         color: var(--on-primary);
-    }
-
-
-    .hero-word button {
-        display: none;
     }
 
 
@@ -1087,103 +946,14 @@ body.dark-theme .testimonial {
         height: 125%;
     }
 
-    .wellnessweek {
-        margin: 100px 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-
-    .awarenesspost,
-    .wellnesspost {
+    main {
         width: 100%;
-    }
-
-    .welaredet {
-        top: 15%;
-    }
-
-
-    .wekklposthead {
-        width: 100%;
-    }
-
-
-    .fa-regular.fa-circle-play {
-        color: white;
-        border-radius: 50%;
-        padding: 5px;
-        font-size: 60px;
-
-    }
-
-    .youtube-container {
-        width: 100%;
-        padding: 0px 16px;
-        margin-top: 100px;
-    }
-
-
-    .youtube {
-        height: 55vh;
-        width: 100%;
-        border-radius: 24px;
-        position: relative;
-
-    }
-
-
-
-
-    .youtube video {
-        height: 55vh;
-        border-radius: 24px;
-    }
-
-    .youtube .over {
-        height: 55vh;
-        border-radius: 24px;
-    }
-
-    .youtubedetail {
-        width: 90%;
-        gap: 32px;
-        position: absolute;
-        top: 10%;
-        left: 5%;
-
-    }
-
-    .youtubedetail>* {
-        text-align: center;
-    }
-
-
-    .youtubedetail h3 {
-        font-size: 25px;
-    }
-
-    .youtubedetail p {
-        font-size: 14px;
-    }
-
-    .playcircle {
-        width: 80px;
-        height: 80px;
-    }
-
-
-    .testimonial-container {
+        display: grid;
         grid-template-columns: 1fr;
-        margin-top: 100px;
         padding: 0px 16px;
+        margin-top: 100px;
+        gap: 40px;
     }
-
-    .testimonial {
-        height: 60vh;
-    }
-
 
 
 
@@ -1210,19 +980,6 @@ body.dark-theme .testimonial {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1262,7 +1019,6 @@ body.dark-theme .testimonial {
     .heroandnav {
         width: 100%;
         height: 50vh;
-        background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 66px;
@@ -1286,132 +1042,39 @@ body.dark-theme .testimonial {
         align-items: end;
     }
 
-    .hero-word {
-        width: 55%;
-    }
-
-
-    .heroimageback {
-        width: 45%;
-    }
-
-    .hero-section h1 {
-        font-size: 40px;
-    }
 
 
 
-    .wellnessweek {
-        margin: 32px;
-        display: grid;
+    main {
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        height: auto;
+        padding: 0px 32px;
+       margin-top: 150px;
     }
+    
 
 
-
-
-    .awarenesspost,
-    .wellnesspost {
-        height: 40vh;
-        width: auto;
-    }
-
-    .awarenesspost img,
-    .wellnesspost img {
-        height: 40vh;
-    }
-
-
-    .welaredet {
-        top: 15%;
-    }
-
-
-    .wekklposthead {
-        width: auto;
+    main form {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-
-
-    .fa-regular.fa-circle-play {
-        color: white;
-        border-radius: 50%;
-        padding: 5px;
-        font-size: 130px;
-
-    }
-
-
-
-
-    .youtube-container {
-        width: 100%;
-        padding: 0px 32px;
-        margin-top: 150px;
-    }
-
-
-    .youtube {
-        height: 60vh;
-        border-radius: 32px;
-    }
-
-
-
-
-    .youtube video {
-        height: 60vh;
-        border-radius: 32px;
-
-    }
-
-    .youtube .over {
-        height: 60vh;
-        border-radius: 32px;
-    }
-
-    .youtubedetail {
-        gap: 64px;
-        top: 15%;
-        left: 5%;
-
-    }
-
+    
    
-    .playcircle {
-       
-        width: 150px;
-        height: 150px;
-    }
-
-
-    .testimonial-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    
+    footer {
+        width: 70%;
+        margin: 200px auto 0px;
+        display: flex;
+        flex-direction: column;
         gap: 24px;
-        margin-top: 150px;
-        padding: 0px 32px;
+        align-items: center;
     }
-
-    .testimonial {
-        height: 40vh;
-    }
-
-
 
     footer h3 {
         text-align: center;
     }
+    
 
-
-
-
-
-
+    
     .search {
         height: 90vh;
         width: 100%;
@@ -1430,7 +1093,7 @@ body.dark-theme .testimonial {
         gap: 8px;
         display: none;
     }
-
+    
     .search.active {
         height: 90vh;
         width: 100%;
@@ -1449,11 +1112,11 @@ body.dark-theme .testimonial {
         gap: 8px;
         display: block;
     }
-
-
-
-
-
+    
+    
+    
+    
+    
     .search input {
         width: 90%;
         background-color: transparent;
@@ -1462,16 +1125,18 @@ body.dark-theme .testimonial {
         color: white;
         outline: none;
     }
-
+    
     .search a {
         margin-top: 8px;
         color: white;
     }
-
+    
     .close {
         position: absolute;
         bottom: 0;
         right: 0;
     }
+
+
 
 }

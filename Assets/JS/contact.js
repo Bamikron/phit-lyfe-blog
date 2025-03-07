@@ -40,10 +40,12 @@ currentDate.textContent = today.toLocaleDateString('en-US', options);
 
 
 
+
+
 const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) { // Show button after scrolling 300px
+  if (window.scrollY > 300) { // Show button after scrolling 300px
     scrollToTopBtn.classList.add('show-button');
   } else {
     scrollToTopBtn.classList.remove('show-button');
