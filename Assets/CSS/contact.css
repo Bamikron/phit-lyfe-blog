@@ -779,7 +779,7 @@ footer {
 
     .heroandnav {
         width: 100vw;
-        height: 40vh;
+        height: 50vh;
         margin-top: 66px;
         padding: 0px 16px;
     }
@@ -834,7 +834,7 @@ footer {
 
 
     .nav-overlay {
-        height: 60vh;
+        height: fit-content;
         width: 70%;
         margin-top: 65px;
         display: none;
@@ -951,7 +951,7 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         padding: 0px 16px;
-        margin-top: 100px;
+        margin-top: 50px;
         gap: 40px;
     }
 
